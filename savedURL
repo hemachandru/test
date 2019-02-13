@@ -1,6 +1,9 @@
 https://stackblitz.com/edit/angular-ax72ew?file=app%2Ftree-checklist-example.html
 
 
+https://stackblitz.com/edit/angular-ax72ew-zdrzsr?file=app%2Ftree-checklist-example.ts
+
+
 
 TREE_DATA = [
     {
