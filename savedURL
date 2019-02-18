@@ -2,6 +2,49 @@ https://stackblitz.com/edit/angular-ax72ew-ahr7kq?file=app/tree-checklist-exampl
 
 https://stackblitz.com/edit/angular-ax72ew-zdrzsr?file=app%2Ftree-checklist-example.ts
 
+
+$("#uploadimage").click(function () {
+
+		            //Get Extension
+		            if ($('.flUpload').val() != '') {
+		                var file = $('.flUpload')[0].files[0];
+		                var fileName = file.name;
+		                var fileExt = '.' + fileName.split('.').pop();
+		                //alert(fileExt);
+		            }
+		            else {
+		                alert('Please select a file.')
+		            } //Extension end
+
+
+		            //var filename = "sivakavi";
+		            var filename = $("#txt_userid").val();
+		            alert(filename);
+		            var data = new FormData();
+		            data.append("UploadedImage", $("#userimage").get(0).files[0]);
+		            $.ajax({
+		                type: "POST",
+		                url: myurl + "/api/fileupload",
+		                processData: false,
+		                contentType: false,
+		                headers: { "filename": filename, "extension": fileExt },
+		                data: data,
+		                async: false,
+		                success: function (data) {
+		                    //alert(data);
+		                    var t = data;
+		                    //alert(t+"----"+uname);
+		                    var xx = uploadPhoto(uname, t);
+		                    //alert(xx);
+		                    alert("Upload Success...!");
+		                    // loadprofilepic(uname);
+		                }
+		            });
+
+
+		        });
+		        //Upload image end
+
 TREE_DATA = [
     {
         "index": 1,
