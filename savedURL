@@ -3,6 +3,10 @@ https://stackblitz.com/edit/angular-ax72ew-ahr7kq?file=app/tree-checklist-exampl
 https://stackblitz.com/edit/angular-ax72ew-zdrzsr?file=app%2Ftree-checklist-example.ts
 
 
+https://medium.freecodecamp.org/best-practices-for-a-clean-and-performant-angular-application-288e7b39eb6f
+
+
+
 $("#uploadimage").click(function () {
 
 		            //Get Extension
